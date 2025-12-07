@@ -2,7 +2,12 @@
 
 set -euo pipefail
 
-ADR_DIR="doc/adr"
+ADR_DIR="doc/ADR"
+
+# Fallback to lowercase folder name if the uppercase one is absent (Linux runners are case-sensitive)
+if [ ! -d "$ADR_DIR" ] && [ -d "doc/adr" ]; then
+  ADR_DIR="doc/ADR"
+fi
 
 echo "Verification des ADR dans ${ADR_DIR}..."
 
