@@ -13,19 +13,19 @@
 - Format impose :
 
   ```markdown
-  #<Numero>. <Titre de la decision>
+  # <Numero>. <Titre de la decision>
 
-  ##Statut
+  ## Statut
   Accepte / Rejete / Obsolete / En discussion
 
-  ##Contexte
+  ## Contexte
   Description du probleme ou du besoin a adresser.
 
-  ##Decision
+  ## Decision
   Solution choisie pour repondre au probleme.
 
-  ##Alternatives envisagees
+  ## Alternatives envisagees
   Liste des alternatives et raisons de leur rejet.
 
-  ##Consequences
+  ## Consequences
   Impacts positifs et negatifs de la decision.
