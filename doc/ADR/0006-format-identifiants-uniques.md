@@ -1,9 +1,9 @@
-#6. Format des identifiants uniques des entites
+# 6. Format des identifiants uniques des entites
 
-##Statut
+## Statut
 Accepte
 
-##Contexte
+## Contexte
 Le systeme doit identifier de maniere unique plusieurs entites : usagers, livres, exemplaires, emprunts, reservations.
 Deux strategies sont courantes :
 - identifiants auto-incrementes generes par la base de donnees,
@@ -15,19 +15,19 @@ Le choix du format d'identifiant peut influencer :
 - la generation de donnees de test,
 - l'exposition des identifiants via une API.
 
-##Decision
+## Decision
 Adopter des **UUID v4** comme identifiants uniques pour les entites principales.
 
 La generation se fait au niveau de l'application, garantissant l'unicite sans dependance a un compteur en base.
 
-##Alternatives envisagees
+## Alternatives envisagees
 - **Identifiants auto-incrementes (entiers)**  
   Rejetes car ils peuvent poser probleme en cas de scalabilite horizontale forte (replication ecriture/ecriture), et exposent des IDs facilement predictibles sur une API publique.
 
 - **UUID v1 (basés sur timestamp + MAC)**  
   Rejetes en raison d’enjeux potentiels de confidentialité (exposition indirecte d’informations reseau ou temporelles).
 
-##Consequences
+## Consequences
 - **Positives**
   - Identifiants uniques garantis sans dependance a un sequenceur SQL.
   - Meilleure compatibilite avec une scalabilite future.
