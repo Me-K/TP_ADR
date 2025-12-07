@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-ADR_DIR="../doc/adr"
+ADR_DIR="doc/adr"
 
 echo "Verification des ADR dans ${ADR_DIR}..."
 
