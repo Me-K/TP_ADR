@@ -1,0 +1,22 @@
+name: ADR Check
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+jobs:
+  adr-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Make adr_check.sh executable
+        run: chmod +x scripts/adr_check.sh
+
+      - name: Run ADR validation script
+        run: ./scripts/adr_check.sh
